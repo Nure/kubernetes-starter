@@ -89,7 +89,11 @@ Make it executable and move it into your path:
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 ```
-
+Check Minikube and Kubectl on your path
+```bash
+cd /usr/local/bin/
+la -a
+```
 ---
 
 ## Step 6: Start Minikube
