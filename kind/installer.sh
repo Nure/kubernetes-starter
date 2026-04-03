@@ -18,16 +18,16 @@ if ! command -v docker &>/dev/null; then
 
   sudo chown $USER /var/run/docker.sock
 
-  echo "Docker installed and user added to docker group ✅"
+  echo "Docker installed and user added to docker group"
 else
-  echo "Docker is already installed ✅"
+  echo "Docker is already installed"
 fi
 
 # ----------------------------
 # 2. Install Kind (based on architecture)
 # ----------------------------
 if ! command -v kind &>/dev/null; then
-  echo "📦 Installing Kind..."
+  echo "Installing Kind..."
 
   ARCH=$(uname -m)
   if [ "$ARCH" = "x86_64" ]; then
@@ -41,24 +41,24 @@ if ! command -v kind &>/dev/null; then
 
   chmod +x ./kind
   sudo mv ./kind /usr/local/bin/kind
-  echo "Kind installed successfully ✅"
+  echo "Kind installed successfully"
 else
-  echo "Kind is already installed ✅"
+  echo "Kind is already installed"
 fi
 
 # ----------------------------
 # 3. Install kubectl (latest stable)
 # ----------------------------
 if ! command -v kubectl &>/dev/null; then
-  echo "📦 Installing kubectl (latest stable version)..."
+  echo "Installing kubectl (latest stable version)..."
 
   curl -LO "https://dl.k8s.io/release/$(curl -Ls https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
   rm -f kubectl
 
-  echo "kubectl installed successfully ✅"
+  echo "kubectl installed successfully"
 else
-  echo "kubectl is already installed ✅"
+  echo "kubectl is already installed"
 fi
 
 # ----------------------------
@@ -71,4 +71,4 @@ kind --version
 kubectl version --client --output=yaml
 
 echo
-echo "Docker, Kind, and kubectl installation complete ✅"
+echo "Docker, Kind, and kubectl installation complete 😊"
