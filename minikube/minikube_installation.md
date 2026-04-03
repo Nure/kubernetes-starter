@@ -64,15 +64,10 @@ First, download the Minikube binary using `curl`:
 
 ```bash
 curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64  #download
-sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64 #install Minikube
+#install Minikube and move it into your path
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
 ```
 
-Make it executable and move it into your path:
-
-```bash
-chmod +x minikube
-sudo mv minikube /usr/local/bin/
-```
 
 Check minikube version
 ```bash
