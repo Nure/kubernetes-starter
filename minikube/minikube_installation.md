@@ -92,7 +92,7 @@ sudo mv kubectl /usr/local/bin/
 Check Minikube and Kubectl on your path
 ```bash
 cd /usr/local/bin/
-la -a
+ls -la
 ```
 ---
 
@@ -133,14 +133,11 @@ kubectl get nodes
 kubectl get nodes -o wide
 kubectl describe node minikube
 ```
-<p>This is a single-node cluster by default. The same node runs the Control Plane and application workloads.</p>p
+This is a single-node cluster by default. The same node runs the Control Plane and application workloads.
 
 ---
+
 ## Step 8: Stop Minikube
-
-
-
-## Step 9: Stop Minikube
 
 When you are done, you can stop the Minikube cluster with:
 

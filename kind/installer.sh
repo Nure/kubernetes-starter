@@ -16,7 +16,7 @@ if ! command -v docker &>/dev/null; then
   echo "👤 Adding current user to docker group..."
   sudo usermod -aG docker "$USER"
 
-  sudo chown $USER /var/run/docker.sock
+  sudo chown "$USER" /var/run/docker.sock
 
   echo "Docker installed and user added to docker group"
 else
@@ -65,7 +65,7 @@ fi
 # 4. Confirm Versions
 # ----------------------------
 echo
-echo "Installed Versions Searcing....:"
+echo "Installed Versions:"
 docker --version
 kind --version
 kubectl version --client --output=yaml
