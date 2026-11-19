@@ -15,7 +15,7 @@ Install KIND and kubectl using the provided [script](https://github.com/bongodev
   ./installer.sh
 ```
 
-This will Docker KIND and kubectl!
+This will install Docker, KIND, and kubectl!
 
 
 ## 2. Setting Up the KIND Cluster
